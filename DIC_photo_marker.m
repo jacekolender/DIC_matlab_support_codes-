@@ -11,7 +11,7 @@
 %before the year and the .tif extensions.
 
 clearvars -except handles_ncorr;
-sourcefolder = 'C:\Users\jo62n\OneDrive - University of Glasgow\Temp\DIC_2022_10_19\Selected Entire Run'; %change folder as appropriate
+sourcefolder = 'your_folder_here'; %change folder as appropriate
 addpath(sourcefolder);
 cd(sourcefolder)
 DIC_files_list = natsortfiles(dir(fullfile(sourcefolder, '*DIC_*.xlsx'))); %find the files where RH and temp data are saved. There have to be more than two (this should be redesigned at some point)
@@ -102,6 +102,3 @@ scatter(time_date_full,dic_rh_full(:,5),25,'Marker','.','MarkerFaceColor','b','M
 hold on
 scatter(image_files,photos_load,25,'Marker','.','MarkerFaceColor','r','MarkerEdgeColor','r')
 hold off
-
-
-
