@@ -1,4 +1,4 @@
-sourcefolder = 'C:\Users\jo62n\OneDrive - University of Glasgow\Temp\DIC_2022_10_19'; %change folder as appropriate
+sourcefolder = 'your_folder_here'; %change folder as appropriate
 addpath(sourcefolder);
 cd(sourcefolder)
 DIC_images_list = natsortfiles(dir(fullfile(sourcefolder, '*DIC_Image_*.tif')));
