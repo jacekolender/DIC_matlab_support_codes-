@@ -1,5 +1,5 @@
 clearvars -except handles_ncorr;
-sourcefolder = 'C:\Users\jo62n\OneDrive - University of Glasgow\Temp\DIC_2022_10_19\Selected Entire Run';
+sourcefolder = 'your_folder_here';
 cd(sourcefolder)
 DIC_images_list = natsortfiles(dir(fullfile(sourcefolder, '*DIC_*.tif'))); %find the files where RH and temp data are saved. There have to be more than two (this should be redesigned at some point)
 DIC_file = dir(fullfile(sourcefolder, '*full_data*.xlsx')); 
