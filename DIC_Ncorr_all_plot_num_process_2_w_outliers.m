@@ -2,7 +2,7 @@
 %ncorr as "handles_ncorr = ncorr"
 %% run section
 clearvars -except handles_ncorr;
-sourcefolder = 'C:\Users\jo62n\OneDrive - University of Glasgow\Temp\DIC_2022_10_19\Selected Entire Run'; %change folder accordingly to the DIC analysis folder
+sourcefolder = 'your_folder_here'; %change folder accordingly to the DIC analysis folder
 cd(sourcefolder);
 exx_strains = struct('plot_exx_ref_formatted', {handles_ncorr.data_dic.strains(1:end).plot_exx_ref_formatted});
 eyy_strains = struct('plot_eyy_ref_formatted', {handles_ncorr.data_dic.strains(1:end).plot_eyy_ref_formatted});
@@ -92,4 +92,3 @@ image_time = array2table(image_time);
 all_table = [all_table image_time];
 all_table.Properties.VariableNames = labels;
 writetable(all_table,"single_frame_analysis_all_graphs_w_outliers.xlsx","FileType",'spreadsheet');
-
